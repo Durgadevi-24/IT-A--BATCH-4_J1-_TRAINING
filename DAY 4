@@ -121,7 +121,7 @@ public class Main {
         System.out.println("The Second Largest Number is " + large);
     }
 }
-// 6.Remove duplication in arrayList (i/p : 1 2 3 2 4 5)
+// 6.Remove duplication in arrayList 
 import java.util.ArrayList;
 public class Main {
     public static void main (String[] args) {
