@@ -66,16 +66,16 @@ public class Main {
       	a.add(1);
       	a.add(2);
       	a.add(3);
-	a.remove(1);
-	a.add(1,5);
-	a.add(0,10);
-	a.set(0,5);
-	//a.clear();
-	ArrayList<Integer> b =  new ArrayList<>(a);
-	System.out.println(b);
-	/*System.out.println(a.contains(2));
-	System.out.println(a);  
-	System.out.println(a.size());
+		a.remove(1);
+		a.add(1,5);
+		a.add(0,10);
+		a.set(0,5);
+		//a.clear();
+		ArrayList<Integer> b =  new ArrayList<>(a);
+		System.out.println(b);
+		/*System.out.println(a.contains(2));
+		System.out.println(a);  
+		System.out.println(a.size());
       	System.out.println(a.get(3));
     }
 }
