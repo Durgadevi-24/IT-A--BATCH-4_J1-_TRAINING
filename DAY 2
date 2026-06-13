@@ -1,0 +1,154 @@
+// 1.Join 2 Arrays
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n1 = sc.nextInt();
+        int a[] = new int[n1];
+        for(int i = 0; i < n1; i++) {
+            a[i] = sc.nextInt();
+        }
+        int n2 = sc.nextInt();
+        int b[] = new int[n2];
+        for(int i = 0; i < n2; i++) {
+            b[i] = sc.nextInt();
+        }
+        for(int i = 0; i < n1; i++) {
+            System.out.print(a[i] + " ");
+        }
+        for(int i = 0; i < n2; i++) {
+            System.out.print(b[i] + " ");
+        }
+    }
+}
+// 2.Pair sum using 2 pointer method
+public class Main {
+    public static void main(String[] args) {
+        int[] arr = {1, 2, 3, 4, 5, 6, 7, 8};
+        int target = 9;
+        int left = 0;
+        int right = arr.length - 1;
+        while (left < right) {
+            int sum = arr[left] + arr[right];
+            if (sum == target) {
+                System.out.println(arr[left] + " " + arr[right]);
+                left++;
+		right--;
+            } else if (sum < target) {
+                left++;
+            } else {
+                right--;
+            }
+        }
+    }
+}
+// 3.Pair sum using brute force method
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        int[] arr = {1, 2, 3, 4, 5, 6, 7, 8};
+        int target = 9;
+	for(int i = 0; i <arr.length;i++){
+		for(int j = i + 1; j<arr.length;j++) {
+			if(arr[i] + arr[j] == target) {
+				System.out.println(arr[i] + " " + arr[j]);
+				}
+			}	
+		}
+	}
+}
+// 4.triplets by using brute force method
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        int arr[] = {1, 2, 3, 4, 5, 6, 7, 8};
+        int target = 9;
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = i + 1; j < arr.length; j++) {
+                for (int k = j + 1; k < arr.length; k++) {
+                    if (arr[i] + arr[j] + arr[k] == target) {
+                        System.out.println(arr[i] + " " + arr[j] + " " + arr[k]);
+                    }
+                }
+            }
+        }
+    }
+}
+// 5.get the 2 i/p from user and print it
+import java.util.Scanner;
+public class Main{
+	public static void main(String[] args){
+	Scanner sc = new Scanner(System.in);
+	int a = sc.nextInt();
+	int b = sc.nextInt();
+	System.out.print(a + " " + b);
+	}
+}
+// 6.get the float i/p from user and print it
+import java.util.Scanner;
+public class Main{
+	public static void main(String[] args){
+	Scanner sc = new Scanner(System.in);
+	double a = sc.nextDouble();
+	System.out.printf("%10.2f",a);
+	}
+}
+// 7.visit home
+import java.util.Scanner;
+public class Main {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt();
+		int[] a = new int[n];
+		for (int i = 0; i < n; i++) {
+			a[i] = sc.nextInt();
+		}
+		int pos=0;
+		int visit=0;
+			pos+=a[0];
+			visit++;
+		for(int i=pos; i<n; i++) {
+			if(pos>n-1) {
+				break;
+			}
+			pos+=a[pos];
+			visit++;
+		}
+		System.out.print(visit);
+	}
+}
+// 8.Adding Two Arrays and Sort
+import java.util.Scanner;
+import java.util.Arrays;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int a[] = new int[n];
+        int b[] = new int[n];
+        int c[] = new int[n];
+        for(int i = 0; i < n; i++) {
+            a[i] = sc.nextInt();
+        }
+        for(int i = 0; i < n; i++) {
+            b[i] = sc.nextInt();
+        }
+        for(int i = 0; i < n; i++) {
+            c[i] = a[i] + b[i];
+        }
+        Arrays.sort(c);
+        for(int i = 0; i < n; i++) {
+            System.out.print(c[i] + " ");
+        }
+    }
+}
+// 9.convert uppercase into lower case by using ternary opeartor
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        char a = sc.next().charAt(0);
+	char r = (a >= 'A' && a <= 'Z') ? (char)(a + 32) : a;
+		System.out.println(r);
+	}
+}
