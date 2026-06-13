@@ -1,0 +1,113 @@
+// 1.Palindrome String
+public class Main {
+	public static void main(String[] args) {
+	String s = "malayalam";
+	String rev = "";
+        for (int i = s.length() - 1; i >= 0; i--) {
+            rev += s.charAt(i);
+        }
+
+        if (s.equals(rev))
+            System.out.println("Palindrome");
+        else
+            System.out.println("Not Palindrome");
+    }
+}
+// 2.Palindrome String from user
+import java.util.Scanner;
+public class Main {
+	public static void main(String[] args) {
+	Scanner sc = new Scanner(System.in);
+	String s = sc.next();
+	String rev = "";
+        for (int i = s.length() - 1; i >= 0; i--) {
+            rev += s.charAt(i);
+        }
+        if (s.equals(rev))
+            System.out.println("Palindrome");
+        else
+            System.out.println("Not Palindrome");
+    }
+}
+// 3.ASCII Value of Character
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        char ch = sc.next().charAt(0);
+        if ((ch >= 'A' && ch <= 'Z') || (ch >= 'a' && ch <= 'z')) {
+            System.out.println((int) ch);
+        } else {
+            System.out.println("Enter an alphabet only");
+        }
+    }
+}
+// 4.Rating Eligiblity
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int A, B, C, D, E;
+        System.out.print("Rating for Order 1: ");
+        A = sc.nextInt();
+        while (A < 1 || A > 5) {
+            System.out.println("Invalid Input , Please the Valid Input , The Range is 1 to 5");
+            System.out.print("Rating for Order 1: ");
+            A = sc.nextInt();
+        }
+        System.out.print("Rating for Order 2: ");
+        B = sc.nextInt();
+        while (B < 1 || B > 5) {
+            System.out.println("Invalid Input , Please the Valid Input , The Range is 1 to 5");
+            System.out.print("Rating for Order 2: ");
+            B = sc.nextInt();
+        }
+        System.out.print("Rating for Order 3: ");
+        C = sc.nextInt();
+        while (C < 1 || C > 5) {
+            System.out.println("Invalid Input , Please the Valid Input , The Range is 1 to 5");
+            System.out.print("Rating for Order 3: ");
+            C = sc.nextInt();
+        }
+        System.out.print("Rating for Order 4: ");
+        D = sc.nextInt();
+        while (D < 1 || D > 5) {
+            System.out.println("Invalid Input , Please the Valid Input , The Range is 1 to 5");
+            System.out.print("Rating for Order 4: ");
+            D = sc.nextInt();
+        }
+        System.out.print("Rating for Order 5: ");
+        E = sc.nextInt();
+        while (E < 1 || E > 5) {
+            System.out.println("Invalid Input , Please the Valid Input , The Range is 1 to 5");
+            System.out.print("Rating for Order 5: ");
+            E = sc.nextInt();
+        }
+        int avg = (A+B+C+D+E) / 5;
+        System.out.println("Average Rating = " + avg);
+        if (avg >= 3.8) {
+            System.out.println("Eligible");
+        } else {
+            System.out.println("Not Eligible");
+        } 
+    }
+}
+// 5.Print and Count the vowels
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String s = sc.nextLine();
+        int count = 0;
+        System.out.print("Vowels:");
+        for (int i = 0; i < s.length(); i++) {
+            char c = Character.toLowerCase(s.charAt(i));
+            if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u' || c == 'A' || c == 'E' || c == 'I' || c == 'O' || c == 'U' ) {
+                System.out.print(c);
+                count++;
+            }
+        }
+        System.out.println();
+        System.out.println(count);
+    }
+}
