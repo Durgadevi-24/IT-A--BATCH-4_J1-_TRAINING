@@ -1,1 +1,139 @@
-
+// 1.Character Frequency 
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String s = sc.nextLine();
+        for (int i = 0; i < s.length(); i++) {
+            boolean e = false;
+            for (int j = 0; j < i; j++) {
+                if (s.charAt(i) == s.charAt(j
+)) {
+                    e = true;
+                    break;
+                }
+            }
+            if (e)
+                continue;
+            int count = 0;
+            for (int k = 0; k < s.length(); k++) {
+                if (s.charAt(i) == s.charAt(k)) {
+                    count++;
+                }
+            }
+            System.out.println(s.charAt(i) + " = " + count);
+        }
+    }
+}
+// 2.Anagram Check
+import java.util.*;
+public class Main{
+public static void main(String[] args){
+	Scanner sc = new Scanner(System.in);
+	String s1 = sc.nextLine();
+	String s2 = sc.nextLine();
+	char[] a = s1.toCharArray();
+	Arrays.sort(a);
+	char[] b = s2.toCharArray();
+	Arrays.sort(b);
+	if(Arrays.equals(a,b)){
+		System.out.println("It is Anagrams");
+	}
+	else{
+		System.out.println("It is n't Anagrams");
+	}
+	}
+}
+// 2.Special characters Extraction
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String s = sc.nextLine();
+        for (int i = 0; i < s.length(); i++) {
+            char ch = s.charAt(i);
+            if (!(ch >= 'A' && ch <= 'Z') && !(ch >= 'a' && ch <= 'z') && !(ch >= '0' && ch <= '9')) {
+                System.out.print(ch);
+            }
+        }
+    }
+}
+// 3.AraryList operations using integer
+import java.util.ArrayList;
+public class Main {
+    public static void main (String[] args) {
+      	ArrayList<Integer> a = new ArrayList<>();
+      	a.add(1);
+      	a.add(2);
+      	a.add(3);
+	a.remove(1);
+	a.add(1,5);
+	a.add(0,10);
+	a.set(0,5);
+	//a.clear();
+	ArrayList<Integer> b =  new ArrayList<>(a);
+	System.out.println(b);
+	/*System.out.println(a.contains(2));
+	System.out.println(a);  
+	System.out.println(a.size());
+      	System.out.println(a.get(3));
+    }
+}
+// 4.ArrayList operations using string [use object instead of string it helps to print all datatype]
+import java.util.ArrayList;
+public class Main {
+    public static void main(String[] args) {
+        ArrayList<String> a = new ArrayList<>();
+        a.add("Durga");
+        a.add("Devi");
+	a.add("sri");
+	a.add("Dev");
+	a.remove(3);
+	a.set(2,"Elakkiya");
+	a.clear();
+        System.out.println(a);
+	System.out.println(a.size());
+      	System.out.println(a.get(3));
+    }
+}
+// 5.Second largest element
+import java.util.ArrayList;
+public class Main {
+    public static void main (String[] args) {
+      	ArrayList<Integer> a = new ArrayList<>();
+	a.add(10);
+	a.add(20);
+	a.add(30);
+	a.add(40);
+	a.add(50);
+	a.add(60);
+	a.add(70);
+	a.add(80);
+	a.add(90);
+	a.add(100);
+	System.out.println(a);
+        int large = a.get(0);
+        for(int i = 1; i<a.size()-1; i++){
+            if(a.get(i)> large){
+                large=a.get(i);
+            }
+        }
+        System.out.println("The Second Largest Number is " + large);
+    }
+}
+// 6.Remove duplication in arrayList (i/p : 1 2 3 2 4 5)
+import java.util.ArrayList;
+public class Main {
+    public static void main (String[] args) {
+      	ArrayList<Integer> a = new ArrayList<>();
+	a.add(1);
+	a.add(2);
+	a.add(3);
+	a.add(2);
+	a.add(4);
+	a.add(5);
+	System.out.println(a);
+	a.remove(3);
+	System.out.println("After Removing Duplication " + a);
+	}
+}
